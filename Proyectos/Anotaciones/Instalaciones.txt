@@ -1,0 +1,11 @@
+-------pip install PySide6
+se uso en la clase 1 y en la clase 2
+se usa pip para instalar una libreria en este caso PySide6
+
+-------pyside6-uic UI/Clase2InterfazGrupo1.ui -o src/Clase2InterfazGrupo1.py
+se uso en la clase 2
+pyside6-uic ------------------>>> transforma un archivo ui a un archivo python
+UI/Clase2InterfazGrupo1.ui --->>> ruta del archivo que queremos convertir
+-o --------------------------->>> a donde va ir dirigido el codigo
+src/Clase2InterfazGrupo1.py -->>> ruta del archivo que va crear con una extension .py
+

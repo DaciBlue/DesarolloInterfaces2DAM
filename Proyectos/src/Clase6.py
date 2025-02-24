@@ -1,12 +1,12 @@
 '''
-Crear un botón personalizado que cambie de color dependiendo del texto que tenga. Además, se
+NOTE: Crear un botón personalizado que cambie de color dependiendo del texto que tenga. Además, se
 debe incluir un slot que responda a la señal emitida cuando el texto cambie, y realice una acción
 como cambiar el tamaño del texto o imprimir un mensaje en la consola.
 Pasos:
 1. Crea un CustomButton que herede de QPushButton.
 2. Implementa una propiedad text que se pueda modificar desde el exterior y emita una señal
 textoCambiado cuando el texto cambie.
-3. Agrega un método set_color_based_on_text que cambie el color de fondo del botón según el
+3. Agrega un métodoo set_color_based_on_text que cambie el color de fondo del botón según el
 texto.
 4. Crea un slot on_text_changed que se conecte a la señal textoCambiado y cambie el tamaño
 del texto cuando esta señal sea emitida.
@@ -14,6 +14,7 @@ del texto cuando esta señal sea emitida.
 6. Prueba el funcionamiento, cambiando el texto del botón y viendo cómo cambia el color y el
 tamaño del texto
 '''
+
 from PySide6.QtWidgets import QPushButton
 from PySide6.QtCore import Signal
 

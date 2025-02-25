@@ -9,18 +9,30 @@ del QLabel dependiendo de si el QCheckBox está marcado o no.
 3. Cuando el QCheckBox esté marcado, cambia el texto del QLabel a "Activado", y cuando no
 lo esté, cambia el texto a "Desactivado".
 '''
+import sys
 from PySide6.QtCore import Slot, Property
-from PySide6.QtWidgets import QCheckBox
+from PySide6.QtWidgets import QCheckBox, QApplication, QMainWindow
 from EjerciciosVoluntarios.Clase6.CheckBox.CheckBoxInterfaz import Ui_MainWindow
 
 
-class CheckBox(QCheckBox):
+class CheckBoxApp(QMainWindow):
     def __init__(self):
         super().__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-        self.checkBox.toggled.connect(self.cambiarTexto)
+        self.ui.checkBox.toggled.connect(self.cambiarTexto)
 
-    @Property(str)
-    def texto(self):
+    # Slot que maneja el cambio de texto del QLabel
+    @Slot(bool)
+    def cambiarTexto(self, estado):
+        if estado:
+            self.ui.lblTexto.setText("Activado")
+        else:
+            self.ui.lblTexto.setText("Desactivado")
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = CheckBoxApp()
+    window.show()
+    sys.exit(app.exec())

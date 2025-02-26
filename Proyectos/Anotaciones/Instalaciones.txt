@@ -10,4 +10,10 @@ UI/Clase2InterfazGrupo1.ui --->>> ruta del archivo que queremos convertir
 src/Clase2InterfazGrupo1.py -->>> ruta del archivo que va crear con una extension .py
 
 pip install datapane ----->>Clase 7
-    para que se haga la instalacion correcta he tenido que cambiar la version de python a 3.10, creo que la 3.12 vale tambien
+    para que se haga la instalacion correcta gracias a juanma:
+    se ha instalado python 3.9 en el entorno virtual
+    despues:
+    python.exe -m pip install --upgrade pip
+    pip install numpy==1.23.5 pandas==1.5.3
+    pip install PySide6
+    pip install PyInstaller

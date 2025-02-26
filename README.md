@@ -2,7 +2,7 @@
 
 _Todo lo que hemos visto en desarrollo de interfaces en 2DAM_  
   
-  _Viene todo por carpetas ↓↓↓ _
+  _Viene todo por carpetas ↓↓↓_
 
 ### Anotaciones
 Viene el codigo que ha usado por consola para cambios e instalaciones de archivos

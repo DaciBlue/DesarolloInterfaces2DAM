@@ -1,2 +1,7 @@
 import pandas as pd
-print(pd.__version__)
+
+fichero_csv = "prueba.csv"
+df = pd.read_csv(fichero_csv)
+
+if __name__ == "__main__":
+    print(df)

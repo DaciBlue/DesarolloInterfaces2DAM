@@ -37,14 +37,7 @@ from PySide6.QtWebEngineWidgets import QWebEngineView
 from PySide6.QtWidgets import QMainWindow, QComboBox, QApplication, QVBoxLayout, QWidget
 
 fichero_csv = "prueba.csv"
-try:
-    df = pd.read_csv(fichero_csv)
-except FileNotFoundError:
-    raise SystemExit(f"Error: El archivo '{fichero_csv}' no se encuentra.")
-except pd.errors.EmptyDataError:
-    raise SystemExit(f"Error: El archivo '{fichero_csv}' está vacío.")
-except Exception as e:
-    raise SystemExit(f"Error al leer el archivo CSV: {e}")
+df = pd.read_csv(fichero_csv)
 
 
 def generar_informe(mes):
@@ -96,7 +89,7 @@ class VentanaPrincipal(QMainWindow):
     def actualizar_reporte(self):
         mes_seleccionado = self.selector_mes.currentText()
         generar_informe(mes_seleccionado)
-        ruta_reporte = os.path.abspath("informe_ventas2.html")
+        ruta_reporte = "informe_ventas2.html"
         if os.path.exists(ruta_reporte):
             with open(ruta_reporte, 'r', encoding='utf-8') as file:
                 html_content = file.read()

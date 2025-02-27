@@ -1,4 +1,4 @@
->[!Note]-------pip install PySide6
+**-------pip install PySide6**
 se uso en la clase 1 y en la clase 2
 se usa pip para instalar una libreria en este caso PySide6
 
@@ -32,6 +32,9 @@ pip install pytest ---->> Clase 8
             pytest src/test_task_managerClas8.py
 
 
-Para generar el .EXE
+Para generar el .EXE hay que:
+    instalar la libreria:
+        pip install pyinstaller
 
-pyinstaller --onefile --windowed InterfazPrueba.py
+    usar la libreria para generarlo:
+        pyinstaller --onefile --windowed InterfazPrueba.py

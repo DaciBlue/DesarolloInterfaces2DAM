@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8" />
+
+<link href="https://datapane-cdn.com/static/v1/datapane-icon-192x192.png" rel="shortcut icon" type="image/png"/>
+<link href="https://datapane-cdn.com/static/v1/datapane-icon-192x192.png" rel="shortcut icon" sizes="192x192"/>
+<link href="https://datapane-cdn.com/static/v1/datapane-icon-192x192.png" rel="apple-touch-icon"/>
+
+<script src="https://kit.fontawesome.com/256c714d9a.js"></script>
+<link
+  href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700|Inconsolata|Karla|Rubik&display=swap"
+  rel="stylesheet"
+/>
+<link href="https://datapane-cdn.com/v0.17.0/report/index.css" rel="stylesheet" />
+<link href="https://datapane-cdn.com/v0.17.0/report/tailwind.css" rel="stylesheet" />
+<script>
+  // analytics config
+  // TODO -- pass these in as props for consistency?
+  window.dpAppRunner = false;
+  window.dpLocal = true;
+
+  /* construct the view */
+  const htmlHeader = `<style type="text/css">:root {
+    --dp-accent-color: #4E46E5;
+    --dp-bg-color: #FFF;
+    --dp-text-align: left;
+    --dp-font-family: Inter, ui-sans-serif, system-ui;
+}</style>`;
+  window.reportProps = { htmlHeader, isLightProse: false, isOrg: false, mode: "VIEW", reportWidthClass: "max-w-screen-xl" };
+
+  if (!window.dpAppRunner) {
+      // pass app data via props if in local (static) mode, otherwise this data is fetched from the server
+      window.reportProps["appData"] = { data: { result: {"view_xml": "\u003cView version=\"1\" fragment=\"false\"\u003e\u003cHTML\u003e\u003c![CDATA[\u003ch1\u003eInforme\u003c/h1\u003e]]\u003e\u003c/HTML\u003e\u003cPlot type=\"application/vnd.vegalite.v5+json\" responsive=\"true\" scale=\"1.0\" src=\"ref://43cf3da538\"/\u003e\u003cPlot type=\"application/vnd.vegalite.v5+json\" responsive=\"true\" scale=\"1.0\" src=\"ref://139dbc5692\"/\u003e\u003c/View\u003e", "assets": {"43cf3da538": {"src": "data:application/vnd.vegalite.v5+json;base64,eyJjb25maWciOiB7InZpZXciOiB7ImNvbnRpbnVvdXNXaWR0aCI6IDMwMCwgImNvbnRpbnVvdXNIZWlnaHQiOiAzMDB9fSwgImRhdGEiOiB7Im5hbWUiOiAiZGF0YS0yMDYyY2E4YWJiM2RhNDI0MmYyMzViODRiOGYxNmE0NCJ9LCAibWFyayI6IHsidHlwZSI6ICJiYXIifSwgImVuY29kaW5nIjogeyJjb2xvciI6IHsiZmllbGQiOiAiQ2F0ZWdvcmlhIiwgInR5cGUiOiAibm9taW5hbCJ9LCAieCI6IHsiZmllbGQiOiAiQ2F0ZWdvcmlhIiwgInR5cGUiOiAibm9taW5hbCJ9LCAieSI6IHsiZmllbGQiOiAiVW5pZGFkZXMgRGlzcG9uaWJsZXMiLCAidHlwZSI6ICJxdWFudGl0YXRpdmUifX0sICJ0aXRsZSI6ICJUb3RhbCBkZSB1bmlkYWRlcyBkaXNwb25pYmxlcyBwb3IgY2F0ZWdvcmlhIGVuIFJvcGEiLCAiJHNjaGVtYSI6ICJodHRwczovL3ZlZ2EuZ2l0aHViLmlvL3NjaGVtYS92ZWdhLWxpdGUvdjUuMjAuMS5qc29uIiwgImRhdGFzZXRzIjogeyJkYXRhLTIwNjJjYThhYmIzZGE0MjQyZjIzNWI4NGI4ZjE2YTQ0IjogW3siUHJvZHVjdG8iOiAiUHJvZHVjdG8gRSIsICJDYXRlZ29yaWEiOiAiUm9wYSIsICJVbmlkYWRlcyBEaXNwb25pYmxlcyI6IDIwMCwgIlByZWNpbyBVbml0YXJpbyAoXHUyMGFjKSI6IDIwLCAiRmVjaGEgZGUgRW50cmFkYSI6ICIyMDIzLTAxLTI1In0sIHsiUHJvZHVjdG8iOiAiUHJvZHVjdG8gRiIsICJDYXRlZ29yaWEiOiAiUm9wYSIsICJVbmlkYWRlcyBEaXNwb25pYmxlcyI6IDEyMCwgIlByZWNpbyBVbml0YXJpbyAoXHUyMGFjKSI6IDE1LCAiRmVjaGEgZGUgRW50cmFkYSI6ICIyMDIzLTAyLTEwIn1dfX0=", "hash": "43cf3da538", "size": 1080, "mime": "application/vnd.vegalite.v5+json"}, "139dbc5692": {"src": "data:application/vnd.vegalite.v5+json;base64,eyJjb25maWciOiB7InZpZXciOiB7ImNvbnRpbnVvdXNXaWR0aCI6IDMwMCwgImNvbnRpbnVvdXNIZWlnaHQiOiAzMDB9fSwgImRhdGEiOiB7Im5hbWUiOiAiZGF0YS0yMDYyY2E4YWJiM2RhNDI0MmYyMzViODRiOGYxNmE0NCJ9LCAibWFyayI6IHsidHlwZSI6ICJsaW5lIn0sICJlbmNvZGluZyI6IHsiY29sb3IiOiB7ImZpZWxkIjogIkNhdGVnb3JpYSIsICJ0eXBlIjogIm5vbWluYWwifSwgIngiOiB7ImZpZWxkIjogIkZlY2hhIGRlIEVudHJhZGEiLCAidHlwZSI6ICJ0ZW1wb3JhbCJ9LCAieSI6IHsiZmllbGQiOiAiVW5pZGFkZXMgRGlzcG9uaWJsZXMiLCAidHlwZSI6ICJxdWFudGl0YXRpdmUifX0sICJ0aXRsZSI6ICJFdm9sdWNpb24gZGUgdW5pZGFkZXMgZGlzcG9uaWJsZXMgZW4gUm9wYSIsICIkc2NoZW1hIjogImh0dHBzOi8vdmVnYS5naXRodWIuaW8vc2NoZW1hL3ZlZ2EtbGl0ZS92NS4yMC4xLmpzb24iLCAiZGF0YXNldHMiOiB7ImRhdGEtMjA2MmNhOGFiYjNkYTQyNDJmMjM1Yjg0YjhmMTZhNDQiOiBbeyJQcm9kdWN0byI6ICJQcm9kdWN0byBFIiwgIkNhdGVnb3JpYSI6ICJSb3BhIiwgIlVuaWRhZGVzIERpc3BvbmlibGVzIjogMjAwLCAiUHJlY2lvIFVuaXRhcmlvIChcdTIwYWMpIjogMjAsICJGZWNoYSBkZSBFbnRyYWRhIjogIjIwMjMtMDEtMjUifSwgeyJQcm9kdWN0byI6ICJQcm9kdWN0byBGIiwgIkNhdGVnb3JpYSI6ICJSb3BhIiwgIlVuaWRhZGVzIERpc3BvbmlibGVzIjogMTIwLCAiUHJlY2lvIFVuaXRhcmlvIChcdTIwYWMpIjogMTUsICJGZWNoYSBkZSBFbnRyYWRhIjogIjIwMjMtMDItMTAifV19fQ==", "hash": "139dbc5692", "size": 1080, "mime": "application/vnd.vegalite.v5+json"}}} }};
+  }
+</script>
+<script type="module">
+  import { mountReport } from "https://datapane-cdn.com/v0.17.0/report/index.es.js";
+  mountReport(window.reportProps);
+</script>
+  </head>
+  <body>
+      <div id="report"></div>
+  </body>
+</html>

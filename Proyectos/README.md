@@ -13,8 +13,8 @@ El siguiente comando instala la librería **PySide6**:
 pip install PySide6
 ```
 
-[!Note]
-Este comando fue utilizado tanto en la Clase 1 como en la Clase 2.
+> [!NOTE]  
+> Este comando fue utilizado tanto en la Clase 1 como en la Clase 2.
 
 #### Conversión de un archivo `.ui` a `.py`
 El comando a continuación se utilizó en la **Clase 2** para transformar un archivo de interfaz UI a un archivo Python:
@@ -40,26 +40,23 @@ Para instalar la librería **datapane** se siguieron estos pasos:
 pip install datapane
 ```
 
-[!Note]
-Antes de realizar esta instalación, fue necesario aplicar los siguientes pasos:
-1. Borrar la carpeta `.venv`.
-2. Instalar Python 3.9 en el entorno virtual.
-3. Actualizar `pip`:
+> [!NOTE]  
+> Antes de realizar esta instalación, fue necesario aplicar los siguientes pasos:  
+> 1. Borrar la carpeta `.venv`.  
+> 2. Instalar Python 3.9 en el entorno virtual.  
+> 3. Actualizar `pip`:  
+>    ```bash
+>    python.exe -m pip install --upgrade pip
+>    ```
+> 4. Instalar versiones específicas de las librerías siguientes:
+>    ```bash
+>    pip install numpy==1.23.5 pandas==1.5.3
+>    pip install PySide6
+>    pip install PyInstaller
+>    ```
 
-   ```bash
-   python.exe -m pip install --upgrade pip
-   ```
-
-4. Instalar versiones específicas de las siguientes librerías:
-
-   ```bash
-   pip install numpy==1.23.5 pandas==1.5.3
-   pip install PySide6
-   pip install PyInstaller
-   ```
-
-[!Tip]
-Esto fue realizado correctamente gracias a la sugerencia de **Juanma**.
+> [!TIP]  
+> Esto fue realizado correctamente gracias a la sugerencia de **Juanma**.
 
 ---
 
@@ -79,19 +76,19 @@ Para ejecutar pruebas usando un ejemplo en la carpeta `test`:
 pytest test/test_task_managerClase8.py
 ```
 
-[!Note]
-Si el proyecto está en `src` y los tests en la carpeta `test`, es necesario configurar el acceso de `pytest` al directorio del proyecto agregando este comando:
+> [!NOTE]  
+> Si el proyecto está en `src` y los tests en la carpeta `test`, es necesario configurar el acceso de `pytest` al directorio del proyecto agregando este comando en el script de test:
+> 
+> ```python
+> sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+> ```
 
-```python
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-```
-
-[!Tip]
-En caso de que el proyecto y los tests estén en la misma carpeta (por ejemplo, todo en `src`), no es necesario usar esta configuración adicional. El comando siguiente sería suficiente:
-
-```bash
-pytest src/test_task_managerClas8.py
-```
+> [!TIP]  
+> En caso de que el proyecto y los tests estén en la misma carpeta (por ejemplo, todo en `src`), no es necesario usar esta configuración adicional. El siguiente comando sería suficiente:
+>
+> ```bash
+> pytest src/test_task_managerClas8.py
+> ```
 
 ---
 
@@ -111,11 +108,11 @@ Para crear un archivo ejecutable a partir de un script en Python, sigue estos pa
    pyinstaller --onefile --windowed InterfazPrueba.py
    ```
 
-[!Note]
-- `--onefile`: Genera un solo archivo ejecutable.
-- `--windowed`: Elimina la consola al ejecutar el archivo `.exe` generado.
+> [!NOTE]  
+> - `--onefile`: Genera un solo archivo ejecutable.  
+> - `--windowed`: Elimina la consola al ejecutar el archivo `.exe` generado.
 
 ---
 
 ## Conclusión
-Este documento reúne los comandos y prácticas utilizadas en el proyecto, organizadas por clase y complementadas con notas y tips para aclaraciones y buen uso futuro.
+Este documento reúne los comandos y prácticas utilizadas en el proyecto, organizadas por clase, y complementadas con notas y tips para aclaraciones y buen uso futuro.

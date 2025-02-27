@@ -8,9 +8,18 @@ Para este reto necesitamos cubrir varios puntos:
 
 ## Imagen
 >[!Note]  
-> La imagen esta en la misma carpeta que el markdown
+> La imagen esta subida en GitHub
   
-![Neo](neo.png)
+![Neo](https://github.com/DaciBlue/DesarolloInterfaces2DAM/blob/main/Proyectos/Retos/Reto3/neo.png)
 
 ## Enlace web
->[!Important]
+>[!Important]  
+> El siguiente enlace es mi propio GitHub
+
+[GitHub Dacian](https://github.com/DaciBlue)
+
+## Conclusion
+Si quieres empezar en programacion, empieza siempre con la funcion mas usada en este mundo:
+
+```sh
+print("Hola Mundo!")

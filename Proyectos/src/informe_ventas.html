@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8" />
+
+<link href="https://datapane-cdn.com/static/v1/datapane-icon-192x192.png" rel="shortcut icon" type="image/png"/>
+<link href="https://datapane-cdn.com/static/v1/datapane-icon-192x192.png" rel="shortcut icon" sizes="192x192"/>
+<link href="https://datapane-cdn.com/static/v1/datapane-icon-192x192.png" rel="apple-touch-icon"/>
+
+<script src="https://kit.fontawesome.com/256c714d9a.js"></script>
+<link
+  href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700|Inconsolata|Karla|Rubik&display=swap"
+  rel="stylesheet"
+/>
+<link href="https://datapane-cdn.com/v0.17.0/report/index.css" rel="stylesheet" />
+<link href="https://datapane-cdn.com/v0.17.0/report/tailwind.css" rel="stylesheet" />
+<script>
+  // analytics config
+  // TODO -- pass these in as props for consistency?
+  window.dpAppRunner = false;
+  window.dpLocal = true;
+
+  /* construct the view */
+  const htmlHeader = `<style type="text/css">:root {
+    --dp-accent-color: #4E46E5;
+    --dp-bg-color: #FFF;
+    --dp-text-align: left;
+    --dp-font-family: Inter, ui-sans-serif, system-ui;
+}</style>`;
+  window.reportProps = { htmlHeader, isLightProse: false, isOrg: false, mode: "VIEW", reportWidthClass: "max-w-screen-xl" };
+
+  if (!window.dpAppRunner) {
+      // pass app data via props if in local (static) mode, otherwise this data is fetched from the server
+      window.reportProps["appData"] = { data: { result: {"view_xml": "\u003cView version=\"1\" fragment=\"false\"\u003e\u003cHTML\u003e\u003c![CDATA[\u003ch2 style=\"text-align:center;\"\u003eInforme de Ventas - Enero\u003c/h2\u003e]]\u003e\u003c/HTML\u003e\u003cText\u003e\u003c![CDATA[**Unidades totales vendidas en Enero: 45**]]\u003e\u003c/Text\u003e\u003cPlot type=\"application/vnd.vegalite.v5+json\" responsive=\"true\" scale=\"1.0\" src=\"ref://e221483151\"/\u003e\u003cPlot type=\"application/vnd.vegalite.v5+json\" responsive=\"true\" scale=\"1.0\" src=\"ref://a1a32ef2d7\"/\u003e\u003cDataTable type=\"application/vnd.apache.arrow+binary\" rows=\"3\" columns=\"4\" schema=\"[]\" src=\"ref://ddbd003d18\"/\u003e\u003c/View\u003e", "assets": {"e221483151": {"src": "data:application/vnd.vegalite.v5+json;base64,eyJjb25maWciOiB7InZpZXciOiB7ImNvbnRpbnVvdXNXaWR0aCI6IDMwMCwgImNvbnRpbnVvdXNIZWlnaHQiOiAzMDB9fSwgImRhdGEiOiB7Im5hbWUiOiAiZGF0YS1lZWQ1NzNlZWYxYTY2ZjhmZjVmNGI5MzZiYmI3MGNjYSJ9LCAibWFyayI6IHsidHlwZSI6ICJiYXIifSwgImVuY29kaW5nIjogeyJjb2xvciI6IHsiZmllbGQiOiAiTm9tYnJlIiwgInR5cGUiOiAibm9taW5hbCJ9LCAieCI6IHsiZmllbGQiOiAiTm9tYnJlIiwgInR5cGUiOiAibm9taW5hbCJ9LCAieSI6IHsiZmllbGQiOiAiSW1wb3J0ZSAoXHUyMGFjKSIsICJ0eXBlIjogInF1YW50aXRhdGl2ZSJ9fSwgInRpdGxlIjogIlZlbnRhcyBwb3IgVmVuZGVkb3IgZW4gRW5lcm8iLCAiJHNjaGVtYSI6ICJodHRwczovL3ZlZ2EuZ2l0aHViLmlvL3NjaGVtYS92ZWdhLWxpdGUvdjUuMjAuMS5qc29uIiwgImRhdGFzZXRzIjogeyJkYXRhLWVlZDU3M2VlZjFhNjZmOGZmNWY0YjkzNmJiYjcwY2NhIjogW3siTWVzIjogIkVuZXJvIiwgIk5vbWJyZSI6ICJBbmEiLCAiVW5pZGFkZXMiOiAxMCwgIkltcG9ydGUiOiAxMDAwfSwgeyJNZXMiOiAiRW5lcm8iLCAiTm9tYnJlIjogIkp1YW4iLCAiVW5pZGFkZXMiOiAxNSwgIkltcG9ydGUiOiAxNTAwfSwgeyJNZXMiOiAiRW5lcm8iLCAiTm9tYnJlIjogIkNhcmxvcyIsICJVbmlkYWRlcyI6IDIwLCAiSW1wb3J0ZSI6IDIwMDB9XX19", "hash": "e221483151", "size": 928, "mime": "application/vnd.vegalite.v5+json"}, "a1a32ef2d7": {"src": "data:application/vnd.vegalite.v5+json;base64,eyJjb25maWciOiB7InZpZXciOiB7ImNvbnRpbnVvdXNXaWR0aCI6IDMwMCwgImNvbnRpbnVvdXNIZWlnaHQiOiAzMDB9fSwgImRhdGEiOiB7Im5hbWUiOiAiZGF0YS1mOTNjMWU4YWU3OGYxNjIzZjgyMzY1Y2ExZDA1YmIwMyJ9LCAibWFyayI6IHsidHlwZSI6ICJhcmMifSwgImVuY29kaW5nIjogeyJjb2xvciI6IHsiZmllbGQiOiAiTm9tYnJlIiwgInR5cGUiOiAibm9taW5hbCJ9LCAidGhldGEiOiB7ImZpZWxkIjogIlVuaWRhZGVzIiwgInR5cGUiOiAicXVhbnRpdGF0aXZlIn19LCAidGl0bGUiOiAiRGlzdHJpYnVjaVx1MDBmM24gZGUgVW5pZGFkZXMgVmVuZGlkYXMgZW4gRW5lcm8iLCAiJHNjaGVtYSI6ICJodHRwczovL3ZlZ2EuZ2l0aHViLmlvL3NjaGVtYS92ZWdhLWxpdGUvdjUuMjAuMS5qc29uIiwgImRhdGFzZXRzIjogeyJkYXRhLWY5M2MxZThhZTc4ZjE2MjNmODIzNjVjYTFkMDViYjAzIjogW3siTm9tYnJlIjogIkFuYSIsICJVbmlkYWRlcyI6IDEwfSwgeyJOb21icmUiOiAiQ2FybG9zIiwgIlVuaWRhZGVzIjogMjB9LCB7Ik5vbWJyZSI6ICJKdWFuIiwgIlVuaWRhZGVzIjogMTV9XX19", "hash": "a1a32ef2d7", "size": 756, "mime": "application/vnd.vegalite.v5+json"}, "ddbd003d18": {"src": "data:application/vnd.apache.arrow+binary;base64,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", "hash": "ddbd003d18", "size": 3512, "mime": "application/vnd.apache.arrow+binary"}}} }};
+  }
+</script>
+<script type="module">
+  import { mountReport } from "https://datapane-cdn.com/v0.17.0/report/index.es.js";
+  mountReport(window.reportProps);
+</script>
+  </head>
+  <body>
+      <div id="report"></div>
+  </body>
+</html>

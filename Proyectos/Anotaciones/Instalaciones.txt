@@ -1,4 +1,4 @@
--------pip install PySide6
+>[!Note]-------pip install PySide6
 se uso en la clase 1 y en la clase 2
 se usa pip para instalar una libreria en este caso PySide6
 
@@ -30,3 +30,8 @@ pip install pytest ---->> Clase 8
         En caso de tener el proyecto y el test en la misma carpeta, pongamos ej: toodo en la carpeta src
           no hace falta dicho comando, con poner lo siguiente ya funcionaria:
             pytest src/test_task_managerClas8.py
+
+
+Para generar el .EXE
+
+pyinstaller --onefile --windowed InterfazPrueba.py

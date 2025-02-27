@@ -11,9 +11,22 @@ src/Clase2InterfazGrupo1.py -->>> ruta del archivo que va crear con una extensio
 
 pip install datapane ----->>Clase 7
     para que se haga la instalacion correcta gracias a juanma:
+    borrado la carpeta .venv
     se ha instalado python 3.9 en el entorno virtual
     despues:
     python.exe -m pip install --upgrade pip
     pip install numpy==1.23.5 pandas==1.5.3
     pip install PySide6
     pip install PyInstaller
+
+pip install pytest ---->> Clase 8
+    Se usa para poder hacer test de forma automatica
+    pytest test/test_task_managerClase8.py
+        Ojo con esta funcion, si esta el proyecto en src y los test en la carpeta test
+         hay que poner el siguiente comando que indica donde ha de acceder el pytest para realizar las comprobaciones
+         Comando:
+         sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+        En caso de tener el proyecto y el test en la misma carpeta, pongamos ej: toodo en la carpeta src
+          no hace falta dicho comando, con poner lo siguiente ya funcionaria:
+            pytest src/test_task_managerClas8.py

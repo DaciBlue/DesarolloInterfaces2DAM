@@ -41,7 +41,8 @@ Producto F,Marzo,120,15
 import sys
 
 from PySide6.QtCore import Qt
-from PySide6.QtWidgets import QMainWindow, QApplication, QVBoxLayout, QWidget, QLineEdit, QPushButton, QLabel, QComboBox
+from PySide6.QtWidgets import QMainWindow, QApplication, QVBoxLayout, QWidget, QLineEdit, QPushButton, QLabel, \
+    QComboBox, QHBoxLayout
 
 
 class primero(QMainWindow):
@@ -105,9 +106,20 @@ class cambio_color(QMainWindow):
         elif texto == "Azul":
             self.setStyleSheet("QWidget { background-color: rgb(0, 0, 255); }")
 
+class Coche(QMainWindow):
+    def __init__(self):
+        self.en_marcha = False
+
+    def arrancar(self):
+        self.en_marcha = True
+    def detener(self):
+        self.en_marcha = False
+    def estado(self):
+        return 'En marcha' if self.en_marcha else 'Detenido'
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    window = cambio_color()
+    window = Coche()
     window.show()
     sys.exit(app.exec())

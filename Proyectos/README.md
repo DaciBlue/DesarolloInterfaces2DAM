@@ -113,6 +113,3 @@ Para crear un archivo ejecutable a partir de un script en Python, sigue estos pa
 > - `--windowed`: Elimina la consola al ejecutar el archivo `.exe` generado.
 
 ---
-
-## Conclusión
-Este documento reúne los comandos y prácticas utilizadas en el proyecto, organizadas por clase, y complementadas con notas y tips para aclaraciones y buen uso futuro.

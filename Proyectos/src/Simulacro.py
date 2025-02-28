@@ -39,7 +39,10 @@ Producto E,Marzo,200,20
 Producto F,Marzo,120,15
 '''
 import sys
-
+import os
+import pandas as pd
+import altair as alt
+import datapane as dp
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QMainWindow, QApplication, QVBoxLayout, QWidget, QLineEdit, QPushButton, QLabel, \
     QComboBox, QHBoxLayout
@@ -116,6 +119,41 @@ class Coche(QMainWindow):
         self.en_marcha = False
     def estado(self):
         return 'En marcha' if self.en_marcha else 'Detenido'
+
+fichero = "simulacro.csv"
+df = pd.read_csv(fichero)
+
+class csv(QMainWindow):
+
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("CSV")
+        self.setFixedSize(400, 400)
+
+    def informe(producto):
+        datos_productos = df[df['Producto'] == producto]
+
+        ##Grafico barras A
+        grafico_barras = alt.Chart(datos_productos).mark_bar().encode(
+            x='Producto:P', y='Unidades Vendidas:U', color='Producto:P'
+        ).properties(title=f"Unidades vendidas por cada {producto}")
+
+        ##Grafico lineas B
+        agrupa_producto_unidades = datos_productos.groupby('Producto')["Unidades Vendidas"].sum().reset_index()
+        grafico_lineas = alt.Chart(agrupa_producto_unidades).mark_line().encode(
+            x='Mes:M', y='Unidades Vendidas:U', color='Mes'
+        ).properties(title=f"Evolucion de las ventas por meses del {producto}")
+
+        titulo = dp.HTML('<h1>Informe</h1>')
+
+        reporte = dp.Report(
+            titulo,
+            dp.Plot(grafico_barras),
+            dp.Plot(grafico_lineas)
+        )
+
+        ruta_reporte = os.path.abspath("reporte_simulacro.html")
+        reporte.save(ruta_reporte)
 
 
 if __name__ == '__main__':

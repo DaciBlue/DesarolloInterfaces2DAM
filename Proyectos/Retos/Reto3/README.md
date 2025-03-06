@@ -23,3 +23,7 @@ Si quieres empezar en programacion, empieza siempre con la funcion mas usada en 
 
 ```sh
 print("Hola Mundo!")
+```
+```python
+print("Hola Mundo!")
+```
